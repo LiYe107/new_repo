@@ -1,0 +1,11 @@
+server:
+  port: 8505
+spring:
+  application:
+    name: consul-client-consumer
+  consul:
+    host: localhost
+    port: 8500
+    discovery:
+      register: false
+  

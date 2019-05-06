@@ -1,0 +1,18 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka
+server:
+  port: 8041
+spring:
+  application:
+    name: turbine-service
+security:
+  basic:
+    enabled: false
+turbine:
+  aggregator:
+    clusterConfig: default
+  appConfig: FEIGN-SERVICE,RIBBON-SERVICE
+  clusterNameExpression: new String("default")
+      

@@ -1,0 +1,13 @@
+server:
+  port: 8501
+spring:
+  application:
+    name: consul-demo1
+  consul:
+    host: localhost
+    port: 8500
+    discovery:
+      healthCheckPath: /health
+      healthCheckInterval: 15s
+      insance-id: consul-demo1
+  

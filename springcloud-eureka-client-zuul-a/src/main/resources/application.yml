@@ -1,0 +1,19 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka
+server:
+  port: 8051
+spring:
+  application:
+    name: zuul-service
+zuul:
+  routes:
+    api-ribbon:
+      path: /ribbon/**
+      serviceId: RIBBON-SERVICE
+    api-feign:
+      path: /feign/**
+      serviceId: FEIGN-SERVICE
+token:
+  key: neau-token-10011      

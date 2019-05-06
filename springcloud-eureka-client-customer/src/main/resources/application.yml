@@ -1,0 +1,17 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka
+server:
+  port: 8021
+spring:
+  application:
+    name: ribbon-service
+management:
+  security:
+    enabled: false 
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+      base-path: /
